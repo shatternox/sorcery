@@ -1,5 +1,7 @@
 from flask import render_template, render_template_string, request, Blueprint
 from website.core.ocrCustomBambang import get_img_string
+from website.core.utils import downloadImage
+from secrets import token_hex
 import os
 
 
@@ -13,7 +15,17 @@ def index():
     if request.method == "POST":
         image_link = request.form.get("image-link")
 
-        text_result = get_img_string(image_link)
+        downloaded_image = downloadImage(image_link)
+
+        image_name = token_hex(16)
+        image_path = f"../static/images/{image_name}"
+
+        f = open(image_path, "w")
+        f.write(downloaded_image)
+
+        f.close()
+
+        text_result = get_img_string(image_path)
 
         return render_template_string(f'''
         

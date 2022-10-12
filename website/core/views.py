@@ -43,11 +43,11 @@ def index():
     <div class="d-flex w-100 justify-content-center align-self-center text-white">
       <h1>Wow.. What Sorcery Is This?</h1>
     </div>
-    <h2 class="text-center">{text_result}</h2>
+    <h3 class="text-center">{text_result}</h3>
   </div>
   <form action="/index" method="POST">
     <div class="search-box">
-      <input type="text" class="search-txt" name="image-link" placeholder="Try to Put Something, maybe a link?">
+      <input type="text" class="search-txt" name="image-link" placeholder="Try to Put Something">
       <button type="submit" class="search-btn">
       <ion-icon name="search-outline"></ion-icon>
     </div>

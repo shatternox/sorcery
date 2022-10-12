@@ -13,9 +13,9 @@
       <h1>Sorcery</h1>
     </div>
   </div>
-  <form action="search" method="GET">
+  <form action={{ url_for("core.index") }} method="POST">
     <div class="search-box">
-      <input type="text" class="search-txt" name="q" placeholder="Try Something">
+      <input type="text" class="search-txt" name="image-link" placeholder="Try to Put Something">
       <button type="submit" class="search-btn">
       <ion-icon name="search-outline"></ion-icon>
     </div>

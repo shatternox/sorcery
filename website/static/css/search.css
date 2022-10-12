@@ -10,7 +10,7 @@
 body {
     min-height: 100%;
     position: relative;
-    background-color: #0e0d22;
+    background-color: #129696;
 }
 
 #topbar {
@@ -19,7 +19,7 @@ body {
     width: 100%;
     align-items: flex-end;
     position: fixed;
-    background-color: #0e0d22;
+    background-color: #129696;
 }
 
 #searchbarimage {

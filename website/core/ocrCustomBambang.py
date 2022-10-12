@@ -5,7 +5,7 @@ from pdf2image import convert_from_path
 
 def get_img_string(img):
     # img = Image.open(img_path)
-    result = pytesseract.image_to_string(img, lang='por')
+    result = pytesseract.image_to_string(img, lang='eng')
     return result
 
 

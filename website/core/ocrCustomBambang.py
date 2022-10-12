@@ -40,5 +40,3 @@ def tesseract_test_pdf():
     print('\n*** Lendo documento: ' + pdf_path + '\n')
     print(get_text_from_pages(pdf_to_img(pdf_path)))
 
-# "main"
-tesseract_test_pdf()

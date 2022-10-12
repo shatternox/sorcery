@@ -17,10 +17,10 @@ def index():
 
         downloaded_image = downloadImage(image_link)
 
-        image_name = token_hex(16)
-        image_path = f"../static/images/{image_name}"
+        image_name = token_hex(16) + ".jpg"
+        image_path = f"./website/static/images/{image_name}"
 
-        f = open(image_path, "w")
+        f = open(image_path, "wb")
         f.write(downloaded_image)
 
         f.close()
@@ -47,7 +47,7 @@ def index():
   </div>
   <form action="/index" method="POST">
     <div class="search-box">
-      <input type="text" class="search-txt" name="image-link" placeholder="Try to Put Something">
+      <input type="text" class="search-txt" name="image-link" placeholder="Try to Put Something, maybe a link?">
       <button type="submit" class="search-btn">
       <ion-icon name="search-outline"></ion-icon>
     </div>

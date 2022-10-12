@@ -27,6 +27,8 @@ def index():
 
         text_result = get_img_string(image_path)
 
+        # Kalo mau tambahin complexity, kasih blacklist aja di sini
+
         return render_template_string(f'''
         
 <html lang="en">

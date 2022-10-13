@@ -8,5 +8,6 @@ services:
             - .:/sorcery
         networks:
             - default
+        tty: true 
 volumes:
     persistent:

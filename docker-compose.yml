@@ -5,7 +5,8 @@ services:
         ports: 
             - "5000:5000"
         volumes:
-            - .:/sorcery
+            - ./website:/sorcery
+            - ./magic_portal_34526235:/magic_portal_34526235
         networks:
             - default
         tty: true 

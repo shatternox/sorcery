@@ -17,8 +17,8 @@ def index():
 
         downloaded_image = downloadImage(image_link)
 
-        image_name = token_hex(16) + ".jpg"
-        image_path = f"./website/static/images/{image_name}"
+        image_name = token_hex(16) + ".png"
+        image_path = f"{os.path.abspath(os.path.dirname(__file__))}/../static/images/{image_name}"
 
         f = open(image_path, "wb")
         f.write(downloaded_image)
